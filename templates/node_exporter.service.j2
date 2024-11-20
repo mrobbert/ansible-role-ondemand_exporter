@@ -1,0 +1,11 @@
+[Unit]
+Description=OnDemandExporter
+
+[Service]
+TimeoutStartSec=0
+User=ondemand_exporter
+ExecStart={{ ondemand_exporter_bin_path }} --web.listen-address={{ ondemand_exporter_host }}:{{ ondemand_exporter_port }} {{ ondemand_exporter_options }}
+Restart={{ ondemand_exporter_restart }}
+
+[Install]
+WantedBy=multi-user.target

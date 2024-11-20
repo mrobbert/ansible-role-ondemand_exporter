@@ -1,0 +1,21 @@
+---
+# Use the latest ondemand_exporter release
+ondemand_exporter_version: 'latest'
+
+# Alternatively, set a specific version
+# See available releases: https://github.com/prometheus/ondemand_exporter/releases/
+# ondemand_exporter_version: '0.18.1'
+
+ondemand_exporter_arch: 'amd64'
+ondemand_exporter_download_url: https://github.com/prometheus/ondemand_exporter/releases/download/v{{ ondemand_exporter_version }}/ondemand_exporter-{{ ondemand_exporter_version }}.linux-{{ ondemand_exporter_arch }}.tar.gz
+
+ondemand_exporter_bin_path: /usr/local/bin/ondemand_exporter
+
+# Set ondemand_exporter_host to localhost if you wish to expose ondemand_exporter on localhost only.
+ondemand_exporter_host: ''
+ondemand_exporter_port: 9100
+ondemand_exporter_options: ''
+
+ondemand_exporter_state: started
+ondemand_exporter_enabled: true
+ondemand_exporter_restart: on-failure

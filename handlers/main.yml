@@ -1,0 +1,5 @@
+---
+- name: restart ondemand_exporter
+  service:
+    name: ondemand_exporter
+    state: restarted
