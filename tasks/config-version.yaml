@@ -3,7 +3,7 @@
   delegate_to: localhost
   become: false
   uri:
-    url: "https://api.github.com/repos/prometheus/ondemand_exporter/releases/latest"
+    url: "https://api.github.com/repos/OSC/ondemand_exporter/releases/latest"
     body_format: json
   register: _github_release
   until: _github_release.status == 200
@@ -17,4 +17,4 @@
 
 - name: Set ondemand_exporter_download_url
   set_fact:
-    ondemand_exporter_download_url: "https://github.com/prometheus/ondemand_exporter/releases/download/v{{ ondemand_exporter_version }}/ondemand_exporter-{{ ondemand_exporter_version }}.linux-{{ ondemand_exporter_arch }}.tar.gz"
+    ondemand_exporter_download_url: "https://github.com/OSC/ondemand_exporter/releases/download/v{{ ondemand_exporter_version }}/ondemand_exporter-{{ ondemand_exporter_version }}.linux-{{ ondemand_exporter_arch }}.tar.gz"

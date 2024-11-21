@@ -3,8 +3,7 @@ dependencies: []
 galaxy_info:
   author: mrobbert
   role_name: ondemand_exporter
-  description: Prometheus' ondemand_exporter for Linux hosts.
-  company: Midwestern Mac, LLC
+  description: Prometheus ondemand_exporter for Linux hosts.
   license: license (MIT)
   min_ansible_version: 2.10
   platforms:
@@ -36,9 +35,6 @@ galaxy_info:
       versions:
         - all
   galaxy_tags:
-    - system
-    - docker
-    - containers
     - monitoring
     - prometheus
     - ondemand

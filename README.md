@@ -17,7 +17,7 @@ The version of OnDemand exporter to install. Available releases can be found on 
 If you change the version, the `ondemand_exporter` binary will be replaced with the updated version, and the service will be restarted.
 
     ondemand_exporter_arch: 'amd64'
-    ondemand_exporter_download_url: https://github.com/prometheus/ondemand_exporter/releases/download/v{{ ondemand_exporter_version }}/ondemand_exporter-{{ ondemand_exporter_version }}.linux-{{ ondemand_exporter_arch }}.tar.gz
+    ondemand_exporter_download_url: https://github.com/OSC/ondemand_exporter/releases/download/v{{ ondemand_exporter_version }}/ondemand_exporter-{{ ondemand_exporter_version }}.linux-{{ ondemand_exporter_arch }}.tar.gz
 
 The architecture and download URL for ondemand exporter. If you're on a Raspberry Pi running Raspbian, you may need to override the `arch` value with `armv7`.
 
@@ -26,13 +26,13 @@ The architecture and download URL for ondemand exporter. If you're on a Raspberr
 The path where the `ondemand_exporter` binary will be installed.
 
     ondemand_exporter_host: 'localhost'
-    ondemand_exporter_port: 9100
+    ondemand_exporter_port: 9301
 
 Host and port on which ondemand exporter will listen.
 
     ondemand_exporter_options: ''
 
-Any additional options to pass to `ondemand_exporter` when it starts, e.g. `--no-collector.wifi` if you want to ignore any WiFi data.
+Any additional options to pass to `ondemand_exporter` when it starts, e.g. `--collector.apache.status-url` if you want to change the location of Apache's mod_status URL.
 
     ondemand_exporter_state: started
     ondemand_exporter_enabled: true
